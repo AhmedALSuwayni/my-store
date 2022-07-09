@@ -1,27 +1,32 @@
 # MyStoreApp
+![chrome_nrNihRYEO8](https://user-images.githubusercontent.com/107313605/176237209-001ab486-dc61-4b59-9852-01afdd68a593.gif)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
+This is the project of Udacity's Full Stack JavaScript Nanodegree.
+To show basic Angular usages example of web-store.
+Bellow All the functionality in this single-page application:
+- Display List of Products
+- Add Products to The Cart
+- Display The Products in The Cart
+- Edit The quantity in The Cart
+- Delete The product from The Cart
+- Checkout Page
 
-## Development server
+I use this [STORE-FRONT-BACKEND](https://github.com/AhmedALSuwayni/STORE-FRONT-BACKEND) as backend 
+with Postagre database 
+## Run
+### Install Dependencies 
+Clone this repo and open a terminal at the root directory and run following command :
+``` 
+npm install 
+```
+## Start The Server
+In Terminal Run the following command :
+``` 
+ng serve 
+```
+Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
