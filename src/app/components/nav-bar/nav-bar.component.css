@@ -1,0 +1,36 @@
+#confirmation-container{
+    text-align: center;
+    background-color: #4c8997;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+a { 
+    text-decoration: none;
+    color: #F0C326;
+}
+  .confirmation-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .confirmation-header::after {
+    display: flex;
+    height: 100vs;
+    content: "";
+    flex-direction: column;
+    background-color: #01959C;
+    padding-bottom: 20px;
+  }
+  
+  .confirmation-header {
+    background-color: #11788F;
+    color: #F0C326
+  }
+  
+  .confirmation-item {
+    margin-bottom: 30px;
+  }
