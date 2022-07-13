@@ -8,7 +8,7 @@
                     <div class="product-item-detail"><b>{{ product.name}}</b></div>
                     <div class="product-item-detail">$  {{ product.price}}</div>
                     <div class="product-item-detail">
-                        <select (change)="changeOption(product, $event)" style="width: 100px;" class="form-select" aria-label="Default select example">
+                        <select (ngModelChange)="changeOption(product, $event)" style="width: 100px;" class="form-select" aria-label="Default select example">
                             <option *ngFor="let productOption of productQunt"
                                     [ngValue]="productOption"
                                     [selected]="productOption == product.quantity">
@@ -32,7 +32,7 @@
                 <label class="user-detail" for="Address">Address</label>
                 <input required minlength="3" class="user-detail form-control" type="text" name="Address" [(ngModel)]="Address">
                 <label class="user-detail" for="CCN">Credit Card Number</label>
-                <input required minlength="3" class="user-detail form-control" type="number"  name="CCN" [(ngModel)]="CCN">
+                <input required minlength="19" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="user-detail form-control" type="text"  name="CCN" [(ngModel)]="CCN">
                 <h6 class="user-detail" style="font-size: 11px; color: darkgray;">We will never share your payment details with anyone else.</h6>
                 <button type="submit" [disabled]="form.invalid" class="product-info btn btn-primary">Submit</button>
                 </div>

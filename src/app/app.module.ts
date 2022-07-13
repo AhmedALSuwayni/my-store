@@ -14,6 +14,7 @@ import { ProductInfoComponent } from './components/product-info/product-info.com
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ProductItemComponent } from './components/product-item/product-item.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     NavBarComponent,
     CartComponent,
     CheckoutComponent,
+    ProductItemComponent,
   ],
   imports: [
     

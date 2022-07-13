@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Output ,EventEmitter } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
 import { Product } from 'src/app/models/Product';
 import { User } from 'src/app/models/User';
@@ -10,12 +10,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+  @Output() notifyDelete: EventEmitter<string>= new EventEmitter<string>();
+  
   cartProducts: Product[] = [];
   productQunt: number[] = [1,2,3,4,5,6,7,8,9,10];
   totalPrice: number = 0;
   user: User =new User();
   fullName: string = "";
-  CCN: number = 0;
+  CCN: string = "";
   Address: string = "";
 
   
@@ -36,16 +38,17 @@ export class CartComponent implements OnInit {
 
   }
   removeCart(product: Product){
-    alert(this.cartService.remove(product));
+    this.notifyDelete.emit(this.cartService.remove(product));
     this.cartProducts = this.cartService.getCartProducts();
     this.totalPrice = this.cartService.calTotalPrice();
 
   }
-  onSubmit(fullName: string,Address: string,CCN: number){
+  onSubmit(fullName: string,Address: string,CCN: string){
     this.user.Fullname = fullName
     this.user.Address = Address;
     this.user.CCN = CCN;
     this.user.total = this.totalPrice;
+    alert(`Thanks ${fullName} For Choosing Us`)
     this.cartService.addUser(this.user);
     this.cartService.Clear();
     this.router.navigate(['../checkout'])

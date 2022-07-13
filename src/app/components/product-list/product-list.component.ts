@@ -19,11 +19,8 @@ export class ProductListComponent implements OnInit {
     });
   }
 
-  onSubmit(cartProduct: Product, event: any): boolean{
-    const selectedOption = event.target[0].options[event.target[0].options.selectedIndex].value;
-      cartProduct.quantity = parseInt(selectedOption);
-      alert(this.cartService.add(cartProduct));
-     return false;
+  onNotifyAdd(message:string):void{
+    alert(message);
   }
 
 }

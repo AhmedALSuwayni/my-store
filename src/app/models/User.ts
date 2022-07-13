@@ -2,14 +2,14 @@ export class User {
     
     Fullname: string;
     Address: string;
-    CCN: number;
+    CCN: string;
     total: number;
 
     constructor(){
         
         this.Fullname = "";
         this.Address = "";
-        this.CCN = 0;
+        this.CCN = "";
         this.total = 0;
         
     }
